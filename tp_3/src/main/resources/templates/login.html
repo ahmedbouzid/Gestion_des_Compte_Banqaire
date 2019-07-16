@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+    <html lang="en" xmlns:th="http://www.thymeleaf.org" >
+    <head>
+    <meta charset="utf-8">
+
+    <title>Authentification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <!-- Styles -->
+     <link href="css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet">
+    <link href="css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
+    <link rel='stylesheet' id='prettyphoto-css'  href="css/prettyPhoto.css" th:href="@{/css/prettyPhoto.css}" type='text/css' media='all'>
+    <link href="css/fontello.css" th:href="@{/css/fontello.css}" type="text/css" rel="stylesheet">
+	<link href="css/ajoutEnsei.css"  th:href="@{/css/ajoutEnsei.css}"type="text/css" rel="stylesheet">
+
+    <!--[if lt IE 7]>
+            <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">  
+        <![endif]-->
+    <!-- Google Web fonts -->
+  
+    <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' th:href='@{http://fonts.googleapis.com/css?family=Quattrocento:400,700}'rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Patua+One' th:href='@{http://fonts.googleapis.com/css?family=Patua+One}' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans'th:href='@{http://fonts.googleapis.com/css?family=Open+Sans}'  rel='stylesheet' type='text/css'>
+    
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<style>
+
+</style>
+    </head>
+    <body>
+    <div class="navbar-wrapper">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+		  <header>	
+		  	<h1 align="Center" style="color:red"> Bienveunue chez Nous </h1>
+		  </header>
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <nav class="pull-right nav-collapse collapse">
+              <ul id="menu-main" class="nav">
+					
+					</ul>
+            </nav>
+          </div>
+          <!-- /.container -->
+        </div>
+        <!-- /.navbar-inner -->
+      </div>
+      <!-- /.navbar -->
+    </div>
+    <!-- /.navbar-wrapper -->
+	    <div id="top"></div>
+
+    <!-- ******************** HeaderWrap ********************-->
+    <div id="headerwrap">
+      <header class="clearfix">
+        <div class="container">
+		          <div class="row">
+
+              <div class="login-wrap">
+  <div class="login-html">
+  <br>
+  <br>
+  <br>
+  <br>
+    <div th:class="login-form">
+      <form th:action="@{/login}" method="post">
+      <div th:if="${param.error}" class="text-danger" style="color: red"> 
+      Nom d'utilisateur ou Mots de passe est incorrect
+      </div>
+		<table align="center">
+		<tr>
+         <td> <label for="user" class="label">Username</label></td> <br><br>
+         <td> <input name="username" type="text"  style="width: 200px;height:30px; margin-top:1%;margin-left: 0.8%"> </td>
+		 </tr>
+        </di>
+        <tr> 
+		<div class="group">
+         <td> <label for="pass" class="label">Password</label></td>
+          <td><input id="password" name="password" type="password" class="input" data-type="password"  style="width: 190px;height:20px; margin-top:0.5%;margin-left: 0.8%"></td>
+		  </tr>
+        </div>
+		</table>
+        <div class="group">
+          <input id="check" type="checkbox" class="check" checked>
+          <label for="check"><span class="icon"></span> Keep me Signed in</label>
+        </div>
+        <div class="group">
+          <input type="submit" class="button" value="Sign In" >
+        </div>
+        
+      </form>
+     
+        
+    
+</div>
+          </div>
+          <div class="row">
+            <div class="span12">
+              <ul class="icon">
+                <li><a href="https://www.facebook.com/ISIMa.Officiel/" target="_blank"><i class="icon-facebook-circled"></i></a></li>
+                <li><a href="#" target="_blank"><i class="icon-twitter-circled"></i></a></li>
+                <li><a href="#" target="_blank"><i class="icon-skype-circled"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+	
+	</BODY>
+	</HTML>
